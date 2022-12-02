@@ -1,8 +1,8 @@
 import 'dart:io';
 
 void main() async {
-  String file_one = await File('day_1/large_input.txt').readAsString();
-  solve(file_one);
+  String file = await File('day_1/large_input.txt').readAsString();
+  solve(file);
 }
 
 void solve(String file) {

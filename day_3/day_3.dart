@@ -11,7 +11,6 @@ void solve(String file) {
   Set<String> secondHalfChars;
   int result1 = 0;
   int result2 = 0;
-  int counter = 0;
   List<Set<String>> elfGroup = <Set<String>>[];
   for (final String line in list) {
     final List<String> lineList = line.split('');
@@ -26,7 +25,7 @@ void solve(String file) {
         ? common.codeUnits.first - 38
         : common.codeUnits.first - 96;
     elfGroup.add(lineList.toSet());
-    if (counter % 3 == 2) {
+    if (elfGroup.length == 3) {
       final String common =
           elfGroup[0].intersection(elfGroup[1]).intersection(elfGroup[2]).first;
       elfGroup.clear();
@@ -34,7 +33,6 @@ void solve(String file) {
           ? common.codeUnits.first - 38
           : common.codeUnits.first - 96;
     }
-    counter++;
   }
   print('Part 1: $result1');
   print('Part 2: $result2');

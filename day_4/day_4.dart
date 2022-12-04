@@ -21,9 +21,7 @@ void solve(String file) {
         (firstElfFrom >= secondElfFrom && firstElfTo <= secondElfTo)) {
       result1++;
     }
-    if (firstElfFrom == secondElfFrom ||
-        firstElfTo == secondElfTo ||
-        (secondElfFrom >= firstElfFrom && secondElfFrom <= firstElfTo) ||
+    if ((secondElfFrom >= firstElfFrom && secondElfFrom <= firstElfTo) ||
         (secondElfTo >= firstElfFrom && secondElfFrom <= firstElfTo)) {
       result2++;
     }

@@ -29,10 +29,10 @@ void solve(String file) {
   int result2 = 0;
   for (String line in list) {
     List<String> game = line.split(' ');
-    final String me = game[1];
-    final String him = game[0];
-    result1 += table[me]![him]![0];
-    result2 += table[me]![him]![1];
+    final String me = game.last;
+    final String him = game.first;
+    result1 += table[me]![him]!.first;
+    result2 += table[me]![him]!.last;
   }
   print('Part 1: $result1');
   print('Part 2: $result2');
